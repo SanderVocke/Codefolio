@@ -1,27 +1,144 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Sander Vocke: Codefolio</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
--->
-<link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="w3-theme-black.css">
-<link rel="stylesheet" href="font-awesome.min.css">
 <body>
 
 <!-- Header -->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
   <div class="w3-center">
   <h4>Sander Vocke</h4>
-  <h1 class="w3-xxxlarge w3-animate-bottom">WORKFOLIO</h1>
+  <h1 class="w3-xxxlarge w3-animate-bottom">CODEFOLIO</h1>
   </div>
 </header>
 
+<!-- MODALS (popup windows describing portfolio items -->
 
+<div id="BBStudio-Modal" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+	  <!-- Close button -->
+      <span onclick="document.getElementById('BBStudio-Modal').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <h3>BBStudio</h3>
+      
+      <img src="img/BBStudio-anim.gif" style="width:15cm"></img>
+      
+      <p style="text-align:left">
+		This takes me back... BBStudio was a project I did alone back in high school for coursework. I was interested in graphics, game programming and physics engines, so decided to "roll" my own - literally, because to keep it manageble for myself I limited it to only spherical objects. My basic knowledge of Newtonian physics was enough to get the ball rolling! And I learned a lot in the process.
+	  </p>
+	  <p>
+		I added 3D graphics rendering with the <a href="http://www.ogre3d.org/">OGRE 3D engine</a> and a UI that allowed the user to design and store small ballular physics experiments.
+      </p>
+      <p>
+		By far the coolest Eureka moment for me: I added the option to define a force toward a fixed point in space, and found out that if applied in combination with initial motion, the spheres actually started following stable elliptical orbits! That to me was awesome, since the physics engine itself was not much more than an implementation of Newton's second law.
+      </p>
+      <p>TODO: GitHub</p>
+      <h3>Keywords</h3>
+      <p><b>C++, graphics, physics, UI</b></p>
+    </div>
+  </div>
+</div>
+
+<div id="Intergalactic-Modal" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+	  <!-- Close button -->
+      <span onclick="document.getElementById('Intergalactic-Modal').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <h3>Intergalactic</h3>
+      
+      <img src="img/Intergalactic-1.png" style="width:15cm"></img>
+      
+      <p style="text-align:left">
+		Another high-school personal project. This was from even before BBStudio. As I'm sure was true for some other teenagers, my interest in programming stemmed partly from the fantasy of creating my own computer games.
+	  </p>
+	  <p>
+		Although the project proved too ambitious for my own attention span, Intergalactic was a pretty cool 3D game. It used the <a href="http://irrlicht.sourceforge.net/">Irrlicht 3D engine</a>. It had two of my own spaceship designs and a castle floating in space (taken directly from a Quake map).
+      </p>
+      <p>
+		The player could fly around in third-person with mouse controls, control the throttle and shoot lasers. You could crash into the castle and explode. Enemies could be spawned - unfortunately, the most sophisticated AI I came up with was for them to fly in circles forever. The climax was being able to "lock on" to an enemy and fire a missile, which would turn towards the target to hit it.
+      </p>
+      <p>TODO: GitHub, screenshots</p>
+      <h3>Keywords</h3>
+      <p><b>C++, graphics</b></p>
+    </div>
+  </div>
+</div>
+
+<div id="Cuber-Modal" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+	  <!-- Close button -->
+      <span onclick="document.getElementById('Cuber-Modal').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <h3>Cuber</h3>
+      
+      <img src="img/Cuber-anim.gif" style="width:15cm"></img>
+      
+      <p style="text-align:left">
+		During my BSc period, I got increasingly interested in electronics and microcontrollers, and decided to learn more about it by starting another personal project.
+      </p>
+      <p>
+		Cuber is a 8x8x8 LED cube. The first skill I honed with this project was soldering: getting all those LEDs in place and reliably connected was hard! I went for an ambitious wiring scheme, where one microcontroller (programmed in optimized assembly) was required to rapidly control 128 shift registers and switch power to subsets of LEDs to create the illusion of continuous light. The other controller provided a UI through an LCD screen and buttons, and accepted the serial control stream from a PC.
+	  </p>
+      <p>I designed the Cuber circuit board in Eagle and etched it myself. It even had a "simulator" on PC which could consume the exact same serial control stream from a virtual serial port as the real Cuber, and showed all the LED states in an OpenGL rendering window. This allowed me to focus on creating cool animations and a 3D Snake game.
+      </p>
+      <p>TODO: GitHub, screenshots/photos</p>
+      <h3>Keywords</h3>
+      <p><b>Microcontrollers, C, ASM, Circuit Design, Board Layout</b></p>
+    </div>
+  </div>
+</div>
+
+<div id="Brap-Modal" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+	  <!-- Close button -->
+      <span onclick="document.getElementById('Brap-Modal').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <h3>Brap</h3>
+      
+      <img src="img/brap-1.png" style="width:15cm"></img>
+      
+      <p style="text-align:left">
+		My girlfriend and I love to travel. We have built up a huge amount of photos and videos because of this.
+	  </p>
+	  <p>
+		My brother and I got together and cooked up a plan. We would both build a world map with built-in photo/video viewer. He would design the hardware and I would design the user interface. The project never quite got off the ground, but we still use "Brap" to view our collection from our NAS.
+	  </p>
+	  <p>
+		Brap has a HTML5+CSS+Javascript web front-end, PHP+SQLite back-end and a suite of Python scripts for database management.
+	  </p>
+      <p>TODO: GitHub, screenshots</p>
+      <h3>Keywords</h3>
+      <p><b>HTML, CSS, Javascript, PHP, SQL</b></p>
+    </div>
+  </div>
+</div>
+
+<div id="EVC-Modal" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+	  <!-- Close button -->
+      <span onclick="document.getElementById('EVC-Modal').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <h3>Embedded Visual Control</h3>
+      
+      <img src="img/EVC-1.jpg" style="width:15cm"></img>
+      
+      <p style="text-align:left">
+		My girlfriend and I love to travel. We have built up a huge amount of photos and videos because of this.
+	  </p>
+      <p>TODO: GitHub, screenshots</p>
+      <h3>Keywords</h3>
+      <p><b>OpenGL ES, Computer Vision, Motor Control</b></p>
+    </div>
+  </div>
+</div>
 
 <div class="w3-row-padding w3-center w3-margin-top">
 
@@ -31,103 +148,81 @@
 </header>
 <div class="w3-padding"></div>
 
-<div class="w3-third" id="BBStudio" onclick="readMore('BBStudio', 'BBStudioMore')">
-  <div class="w3-card-2 w3-container w3-row" style="min-height:460px">
-	<div class="w3-container">
+<div class="w3-quarter" onclick="document.getElementById('BBStudio-Modal').style.display='block'" style="cursor: pointer">
+  <div class="w3-card-2 w3-container w3-row" style="min-height: 450px">
 		<h3>BBStudio</h3><br>
-		<i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-		<p>Built-in responsiveness</p>
-		<p>Mobile first fluid grid</p>
-		<p>Fits any screen sizes</p>
-		<p>PC Tablet and Mobile</p>
-	</div>
-	<div class="w3-hide w3-container w3-padding" id ="BBStudioMore">
-		<h2>Details</h2>
-		<p style="text-align:left">
-		Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, 
-		toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd 
-		maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen 
-		met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
-		</p>
-	</div>
+		<img src="img/BBStudio-1.png" style="width:200px;height:200px;"></img>
+		<p style="text-align:left">A simple physics engine with spheres as the only kind of object.</p>
+		<p><b>C++, graphics, physics, UI</b></p>
   </div>
 </div>
 
-<div class="w3-third" id="Intergalactic" onclick="readMore('Intergalactic', 'IntergalacticMore')">
-  <div class="w3-card-2 w3-container w3-row" style="min-height:460px">
-	<div class="w3-container">
+<div class="w3-quarter" onclick="document.getElementById('Intergalactic-Modal').style.display='block'" style="cursor: pointer">
+  <div class="w3-card-2 w3-container w3-row" style="min-height: 450px">
 		<h3>Intergalactic</h3><br>
-		<i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-		<p>Built-in responsiveness</p>
-		<p>Mobile first fluid grid</p>
-		<p>Fits any screen sizes</p>
-		<p>PC Tablet and Mobile</p>
-	</div>
-	<div class="w3-hide w3-container w3-padding" id ="IntergalacticMore">
-		<h2>Details</h2>
-		<p style="text-align:left">
-		Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, 
-		toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd 
-		maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen 
-		met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
-		</p>
-	</div>
+		<img src="img/Intergalactic-1.png" style="width:200px;height:200px;"></img>
+		<p style="text-align:left">A 3D space shooter game.</p>
+		<p><b>C++, graphics</b></p>
   </div>
 </div>
 
-<div class="w3-third" id="Cuber" onclick="readMore('Cuber', 'CuberMore')">
-  <div class="w3-card-2 w3-container w3-row" style="min-height:460px">
-	<div class="w3-container">
+<div class="w3-quarter" onclick="document.getElementById('Cuber-Modal').style.display='block'" style="cursor: pointer">
+  <div class="w3-card-2 w3-container w3-row" style="min-height: 450px">
 		<h3>Cuber</h3><br>
-		<i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-		<p>Built-in responsiveness</p>
-		<p>Mobile first fluid grid</p>
-		<p>Fits any screen sizes</p>
-		<p>PC Tablet and Mobile</p>
-	</div>
-	<div class="w3-hide w3-container w3-padding" id ="CuberMore">
-		<h2>Details</h2>
-		<p style="text-align:left">
-		Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, 
-		toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd 
-		maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen 
-		met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
-		</p>
-	</div>
+		<img src="img/cuber-1.jpg" style="width:200px;height:200px;"></img>
+		<p style="text-align:left">A 8x8x8 cube of dual-color LEDs, controlled by a custom board using two ATMega microcontrollers.</p>
+		<p><b>Microcontrollers, C, ASM, Circuit Design, Board Layout</b></p>
+  </div>
+</div>
+
+<div class="w3-quarter" onclick="document.getElementById('Brap-Modal').style.display='block'" style="cursor: pointer">
+  <div class="w3-card-2 w3-container w3-row" style="min-height: 450px">
+		<h3>Brap</h3><br>
+		<img src="img/brap-2.png" style="width:200px;height:200px;"></img>
+		<p style="text-align:left">Web- and Python-based management and viewing system for my personal photos and videos.</p>
+		<p><b>HTML, CSS, Javascript, PHP, SQL</b></p>
   </div>
 </div>
 
 <div class="w3-padding"></div>
 <header class="w3-container">
-  <h2>Study-Related</h2>
+  <h2>Work- / Study-Related</h2>
 </header>
 <div class="w3-padding"></div>
 
-<div class="w3-padding"></div>
-<header class="w3-container">
-  <h2>Work-Related</h2>
-</header>
-<div class="w3-padding"></div>
+<div class="w3-quarter" onclick="document.getElementById('EVC-Modal').style.display='block'" style="cursor: pointer">
+  <div class="w3-card-2 w3-container w3-row" style="min-height: 450px">
+		<h3>Embedded Visual Control</h3><br>
+		<img src="img/EVC-1.jpg" style="width:200px;height:200px;"></img>
+		<p style="text-align:left">A solar-powered rover with 360 degree vision and object tracking capability.</p>
+		<p><b>OpenGL ES, Computer Vision, Motor Control</b></p>
+  </div>
+</div>
 
-<div class="w3-third" id="HalideIPU" onclick="readMore('HalideIPU', 'HalideIPUMore')">
-  <div class="w3-card-2 w3-container w3-row" style="min-height:460px">
-	<div class="w3-container">
-		<h3>Halide_IPU</h3><br>
-		<i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-		<p>Built-in responsiveness</p>
-		<p>Mobile first fluid grid</p>
-		<p>Fits any screen sizes</p>
-		<p>PC Tablet and Mobile</p>
-	</div>
-	<div class="w3-hide w3-container w3-padding" id ="HalideIPUMore">
-		<h2>Details</h2>
-		<p style="text-align:left">
-		Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, 
-		toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd 
-		maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen 
-		met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
-		</p>
-	</div>
+<div class="w3-quarter" onclick="document.getElementById('HalideIPU-Modal').style.display='block'" style="cursor: pointer">
+  <div class="w3-card-2 w3-container w3-row" style="min-height: 450px">
+		<h3>Halide for IPU</h3><br>
+		<img src="img/HalideIPU-1.png" style="width:200px;height:200px;"></img>
+		<p style="text-align:left">placeholder</p>
+		<p><b>C++11, Halide, DSP, Compiler</b></p>
+  </div>
+</div>
+
+<div class="w3-quarter" onclick="document.getElementById('PowerByProxi-Modal').style.display='block'" style="cursor: pointer">
+  <div class="w3-card-2 w3-container w3-row" style="min-height: 450px">
+		<h3>Qi Wireless Charging</h3><br>
+		<img src="img/PowerByProxy-1.jpg" style="width:200px;height:200px;"></img>
+		<p style="text-align:left">placeholder</p>
+		<p><b>Power Control, ARM, C</b></p>
+  </div>
+</div>
+
+<div class="w3-quarter" onclick="document.getElementById('Leash-Modal').style.display='block'" style="cursor: pointer">
+  <div class="w3-card-2 w3-container w3-row" style="min-height: 450px">
+		<h3>Leash Debugger</h3><br>
+		<img src="img/Leash-1.jpg" style="width:200px;height:200px;"></img>
+		<p style="text-align:left">placeholder</p>
+		<p><b>JTAG, C, ARM, WiFi</b></p>
   </div>
 </div>
 
